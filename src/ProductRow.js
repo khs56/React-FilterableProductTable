@@ -1,10 +1,16 @@
 import React from 'react'
 
-const ProductRow = () => {
+const ProductRow = ({ product }) => {
+  const name = product.stocketd ? product.name :
+    <span style={{ color: 'red' }}>
+      {product.name}
+    </span>
+
   return (
-    <div>
-      ProductRow
-    </div>
+    <tr>
+      <td>{name}</td>
+      <td>{product.price}</td>
+    </tr>
   )
 }
 
